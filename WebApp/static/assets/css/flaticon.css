@@ -18,8 +18,8 @@
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
+	font-family: Flaticon;[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+
 	font-style: normal;
 	line-height: 1;
 }
