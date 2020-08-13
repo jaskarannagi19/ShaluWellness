@@ -48,14 +48,14 @@ a:hover,
 .list_style_2 li::before,
 .cart_total .cart_amount,
 .post_nav a:hover .nav_meta {
-	color: #F32B56;
+	color: #228B22;
 }
 
 .btn-white,
 .sub_heading,
 .text_default,
 .btn-outline-default {
-	color: #F32B56 !important;
+	color: #228B22 !important;
 }
 
 .btn-default,
@@ -87,11 +87,11 @@ a:hover,
 .filter_price .ui-slider .ui-slider-handle,
 .filter_price .ui-slider .ui-slider-range,
 .quantity .minus:hover, .quantity .plus:hover {
-	background-color: #F32B56;
+	background-color: #228B22;
 }
 
 .bg_default {
-	background-color: #F32B56 !important;
+	background-color: #228B22 !important;
 }
 
 .btn-default,
@@ -107,7 +107,7 @@ a:hover,
 .custome-checkbox input[type="checkbox"]:checked + .form-check-label::before,
 .custome-radio input[type="radio"]:checked + .form-check-label::before,
 .tab-style1 .nav-tabs .nav-link.active, .tab-style1 .nav-tabs .nav-link.active:hover {
-	border-color: #F32B56;
+	border-color: #228B22;
 }
 
 .btn-default:hover,
