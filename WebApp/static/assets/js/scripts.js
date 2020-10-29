@@ -224,10 +224,11 @@ PAGE JS
 	    $.ajax({
 	        type: "POST",
 	        dataType: "json",
-	        url: "contact.php",
+	        url: "/send_mail/",
 	        data: mydata,
 	        success: function(data) {
-	            if (data.type === "error") {
+                console.log(data)
+	            if (data.mail === "error") {
 	                $("#alert-msg").removeClass("alert-msg-success");
 	                $("#alert-msg").addClass("alert-msg-failure");
 	            } else {
@@ -240,7 +241,7 @@ PAGE JS
 	                $("#description").val("Enter Message");
 
 	            }
-	            $("#alert-msg").html(data.msg);
+	            $("#alert-msg").html(data.mail);
 	            $("#alert-msg").show();
 	        },
 	        error: function(xhr, textStatus) {
