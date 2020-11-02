@@ -106,22 +106,12 @@
 
 
             <div class="col-lg-6 col-sm-6">
-
-
-
-<div id="" class="container">
-        <h3>Enter your email so we know you.</h3>
-
-    <input type="text" id="txtEmail" class="form-control" style="border:none" placeholder="Email" />
-    <input type="text" id="txtMobile"class="form-control" style="border:none" placeholder="Mobile"/>
-
-</div> <!-- end #form-container -->
-
-
-
+                    <div id="" class="container">
+                        <h3>Enter your email so we know you.</h3>
+                        <input type="text" id="txtEmail" class="form-control" style="border:none" placeholder="Email" />
+                        <input type="text" id="txtMobile"class="form-control" style="border:none" placeholder="Mobile"/>
+                    </div> <!-- end #form-container -->
             </div>
-
-
 
             <div class="col-lg-6 col-sm-6">
 
@@ -240,8 +230,14 @@
                     },
                     success: function( data )
                     {
-                    $( '#like'+ catid ).remove();
-                    $( '#message' ).text(data);
+                        if(data['success']=='true'){
+                        window.location.replace("/thank-you");
+                        }
+                        if(data['success']=='false'){
+
+                        }
+
+
                     }
      })
 

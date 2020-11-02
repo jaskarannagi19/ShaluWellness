@@ -29,7 +29,7 @@ def charge(request):
         environment='sandbox',
     )
     nonce = request.POST['nonce']
-    print(nonce)
+    #print(nonce)
 
     idempotency_key = str(uuid.uuid1())
 
@@ -40,18 +40,18 @@ def charge(request):
     api_response = client.payments.create_payment(body)
     if api_response.is_success():
         res = api_response.body['payment']
+        return JsonResponse({"success":"true","message":"OK"})
 
-        print(res)
     elif api_response.is_error():
         res = "Exception when calling PaymentsApi->create_payment: {}".format(api_response.errors)
-        print(res)
-
-    return HttpResponse("Ok")
+        return JsonResponse({"success":"false","message":res})
 
 
+
+def thankyou(request):
+    return render(request,'website/thank-you.html')
 
 def send_email(request):
-    print(request.POST.get('name'))
 
     name = request.POST.get('name')
     email = request.POST.get('email')
